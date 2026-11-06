@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV & Portfolio | Indah Rizky Nita</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            100: '#ede9fe',
+                            200: '#ddd6fe',
+                            300: '#c4b5fd',
+                            400: '#a78bfa',
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                            700: '#6d28d9',
+                            800: '#5b21b6',
+                            900: '#4c1d95',
+                            dark: '#1e1035',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-purple-bg {
+            background: linear-gradient(135deg, #2e1065 0%, #4c1d95 40%, #6d28d9 70%, #8b5cf6 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(237, 233, 254, 0.5);
+        }
+        .glass-dark {
+            background: rgba(30, 16, 53, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(167, 139, 250, 0.2);
+        }
+        .glow-purple {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.35);
+        }
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans selection:bg-brand-500 selection:text-white">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glass-card bg-white/70 backdrop-blur-md border-b border-brand-100">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-extrabold text-brand-900 tracking-tight font-serif italic">
+                Indah<span class="text-brand-500 not-italic">.RN</span>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-medium text-sm text-slate-600">
+                <a href="#tentang" class="hover:text-brand-600 transition-colors">Tentang Saya</a>
+                <a href="#hobi" class="hover:text-brand-600 transition-colors">Hobi & Seni</a>
+                <a href="#cita-cita" class="hover:text-brand-600 transition-colors">Visi Bos Muda</a>
+                <a href="#skills" class="hover:text-brand-600 transition-colors">Keahlian</a>
+            </div>
+
+            <a href="#kontak" class="bg-brand-600 hover:bg-brand-700 text-white px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg shadow-brand-500/30 transition-all transform hover:-translate-y-0.5">
+                Hubungi Saya
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden gradient-purple-bg text-white">
+        <!-- Background Elements -->
+        <div class="absolute top-10 left-10 w-72 h-72 bg-brand-400/20 rounded-full blur-3xl floating"></div>
+        <div class="absolute bottom-10 right-10 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl floating" style="animation-delay: 2s;"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Column -->
+                <div class="md:col-span-7 space-y-6 text-center md:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-brand-200 text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Future Entrepreneur & Creative Mind
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+                        Halo, Saya <br/>
+                        <span class="font-serif italic font-normal text-brand-200 underline decoration-brand-400 underline-offset-8">Indah Rizky Nita</span>
+                    </h1>
+                    
+                    <p class="text-lg text-brand-100/90 leading-relaxed max-w-xl">
+                        Seorang jiwa muda yang energik, penuh passion dalam <strong class="text-white">seni tari</strong>, serta berambisi tinggi untuk menjadi seorang <strong class="text-brand-300">Bos Muda (Young CEO)</strong> yang visioner, kreatif, dan berdampak positif.
+                    </p>
+
+                    <div class="pt-4 flex flex-wrap gap-4 justify-center md:justify-start">
+                        <a href="#cita-cita" class="bg-white text-brand-900 font-bold px-7 py-3.5 rounded-full shadow-xl hover:bg-brand-50 transition-all transform hover:-translate-y-1">
+                            Visi & Impian <i class="fa-solid font-light fa-arrow-right ml-2 text-brand-600"></i>
+                        </a>
+                        <a href="#hobi" class="bg-brand-800/60 hover:bg-brand-800/90 text-white font-medium px-7 py-3.5 rounded-full border border-brand-400/30 transition-all backdrop-blur-md">
+                            Lihat Hobi Menari <i class="fa-solid fa-music ml-2 text-brand-300"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Avatar Card Column -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Card decoration frame -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-brand-300 to-purple-400 rounded-3xl blur opacity-75 animate-pulse"></div>
+                        
+                        <div class="relative bg-brand-900/90 border border-brand-400/30 rounded-3xl p-6 text-center shadow-2xl backdrop-blur-xl">
+                            <div class="relative w-44 h-44 mx-auto mb-6 rounded-2xl overflow-hidden border-4 border-brand-300/40 shadow-inner">
+                                <img src="https://placehold.co/400x400/5b21b6/ffffff?text=Indah+Rizky+Nita" alt="Indah Rizky Nita" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-brand-900/80 to-transparent"></div>
+                            </div>
+
+                            <h3 class="text-2xl font-bold text-white">Indah Rizky Nita</h3>
+                            <p class="text-brand-300 font-medium text-sm mt-1">Dancer & Future Leader</p>
+                            
+                            <div class="mt-6 pt-6 border-t border-brand-700/60 grid grid-cols-2 gap-4">
+                                <div class="bg-brand-800/50 p-3 rounded-xl border border-brand-600/30">
+                                    <span class="block text-xs text-brand-300 uppercase tracking-wider">Cita-Cita</span>
+                                    <span class="text-sm font-bold text-white mt-0.5 block">Bos Muda 👑</span>
+                                </div>
+                                <div class="bg-brand-800/50 p-3 rounded-xl border border-brand-600/30">
+                                    <span class="block text-xs text-brand-300 uppercase tracking-wider">Hobi</span>
+                                    <span class="text-sm font-bold text-white mt-0.5 block">Menari 💃</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 flex justify-center space-x-3 text-brand-300">
+                                <a href="#" class="w-9 h-9 rounded-full bg-brand-800/80 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="w-9 h-9 rounded-full bg-brand-800/80 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all"><i class="fab fa-tiktok"></i></a>
+                                <a href="#" class="w-9 h-9 rounded-full bg-brand-800/80 flex items-center justify-center hover:bg-brand-500 hover:text-white transition-all"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya Section -->
+    <section id="tentang" class="py-20 relative bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-xs uppercase font-extrabold text-brand-600 tracking-widest mb-2">Profil Singkat</h2>
+                <h3 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-serif">Tentang Indah</h3>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-3xl bg-brand-50/50 border border-brand-100 hover:shadow-xl hover:border-brand-300 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Kepribadian</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Pribadi yang percaya diri, penuh semangat, adaptable, dan selalu optimis dalam menghadapi tantangan baru dengan senyuman.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-3xl bg-brand-50/50 border border-brand-100 hover:shadow-xl hover:border-brand-300 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Kreativitas & Seni</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Mengekspresikan ide, ritme, dan emosi melalui seni tari. Bagi saya, keindahan gerak adalah bentuk komunikasi tanpa kata.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-3xl bg-brand-50/50 border border-brand-100 hover:shadow-xl hover:border-brand-300 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-600 text-white flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-3">Jiwa Kepemimpinan</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Memiliki fokus tinggi untuk membangun bisnis, mengelola tim, serta menciptakan peluang baru sebagai seorang entrepreneur sukses.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobi & Menari Section -->
+    <section id="hobi" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Ambient background glow -->
+        <div class="absolute top-1/2 -left-20 w-80 h-80 bg-brand-600/30 rounded-full blur-3xl"></div>
+
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-brand-500/20 border border-brand-400/40 text-brand-300 text-xs font-semibold uppercase tracking-wider">
+                        Passion & Hobi
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-serif leading-tight">
+                        Menari: Ekspresi, Disiplin, dan Harmoni
+                    </h2>
+                    <p class="text-slate-300 leading-relaxed">
+                        Bagi Indah, menari bukan sekadar hobi di waktu luang, melainkan wadah untuk melatih kestabilan emosi, fokus, kedisiplinan, serta fleksibilitas. Lewat setiap gerakan tari, Indah belajar tentang ritme, kerja sama, dan ketekunan yang juga menjadi fondasi penting untuk dunia kepemimpinan.
+                    </p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/60 border border-slate-700">
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-compact-disc"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white">Modern & Traditional Dance</h5>
+                                <p class="text-xs text-slate-400 mt-0.5">Eksplorasi berbagai genre gerakan yang dinamis dan berkarakter.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-slate-800/60 border border-slate-700">
+                            <div class="w-10 h-10 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white">Stamina & Agilitas</h5>
+                                <p class="text-xs text-slate-400 mt-0.5">Menjaga tubuh tetap sehat, energik, dan selalu siap menghadapi tantangan sehari-hari.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="bg-brand-900/60 p-6 rounded-3xl border border-brand-500/30 text-center hover:scale-105 transition-transform">
+                            <span class="text-4xl mb-2 block">💃</span>
+                            <h4 class="font-bold text-lg">Choreography</h4>
+                            <p class="text-xs text-brand-200 mt-1">Kreativitas menciptakan pola gerak indah</p>
+                        </div>
+                        <div class="bg-brand-800/40 p-6 rounded-3xl border border-brand-500/30 text-center hover:scale-105 transition-transform">
+                            <span class="text-4xl mb-2 block">🎵</span>
+                            <h4 class="font-bold text-lg">Rhythm Sense</h4>
+                            <p class="text-xs text-brand-200 mt-1">Peka terhadap tempo & harmoni musik</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-8">
+                        <div class="bg-brand-800/40 p-6 rounded-3xl border border-brand-500/30 text-center hover:scale-105 transition-transform">
+                            <span class="text-4xl mb-2 block">✨</span>
+                            <h4 class="font-bold text-lg">Stage Presence</h4>
+                            <p class="text-xs text-brand-200 mt-1">Kepercayaan diri tinggi di depan publik</p>
+                        </div>
+                        <div class="bg-brand-900/60 p-6 rounded-3xl border border-brand-500/30 text-center hover:scale-105 transition-transform">
+                            <span class="text-4xl mb-2 block">🤝</span>
+                            <h4 class="font-bold text-lg">Teamwork</h4>
+                            <p class="text-xs text-brand-200 mt-1">Kekompakan dalam tarian kelompok</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Cita-Cita Bos Muda Section -->
+    <section id="cita-cita" class="py-20 bg-gradient-to-b from-brand-50 to-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-extrabold text-brand-600 uppercase tracking-widest block mb-2">Impian & Ambil Peran</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 font-serif">Visi "Bos Muda" (Young CEO)</h2>
+                <p class="text-slate-600 mt-3 text-sm">Menjadi pemimpin generasi baru yang kreatif, solutif, dan mandiri secara finansial di usia muda.</p>
+                <div class="w-16 h-1 bg-brand-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all relative">
+                    <span class="text-5xl font-extrabold text-brand-100 absolute top-4 right-6 font-serif">01</span>
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-2">Continuous Learning</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Terus mengasah ilmu bisnis, manajemen, serta mengikuti perkembangan tren teknologi modern.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all relative">
+                    <span class="text-5xl font-extrabold text-brand-100 absolute top-4 right-6 font-serif">02</span>
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-2">Leadership Skill</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Membangun karakter peminpin yang menginspirasi, adil, empati, dan tegas dalam mengambil keputusan.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all relative">
+                    <span class="text-5xl font-extrabold text-brand-100 absolute top-4 right-6 font-serif">03</span>
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-2">Inovasi Bisnis</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Menciptakan produk/jasa di bidang industri kreatif & lifestyle yang bernilai tinggi.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white p-6 rounded-3xl border border-slate-200 shadow-sm hover:shadow-md transition-all relative">
+                    <span class="text-5xl font-extrabold text-brand-100 absolute top-4 right-6 font-serif">04</span>
+                    <div class="w-10 h-10 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold mb-4">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h4 class="font-bold text-slate-900 mb-2">Dampak Positif</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Membuka lapangan kerja dan memberikan motivasi bagi anak muda lain untuk berani bermimpi besar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skill Bar Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="text-3xl font-extrabold text-slate-900 font-serif">Keahlian & Potensi</h2>
+                <p class="text-sm text-slate-500 mt-2">Kombinasi antara seni kreatif dan kepemimpinan</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Skill 1 -->
+                <div>
+                    <div class="flex justify-between text-sm font-semibold mb-2">
+                        <span class="text-slate-800">Seni Tari & Performance (Dance)</span>
+                        <span class="text-brand-600">92%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-brand-600 h-full rounded-full w-[92%] transition-all duration-1000"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div>
+                    <div class="flex justify-between text-sm font-semibold mb-2">
+                        <span class="text-slate-800">Public Speaking & Communication</span>
+                        <span class="text-brand-600">88%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-brand-600 h-full rounded-full w-[88%] transition-all duration-1000"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 3 -->
+                <div>
+                    <div class="flex justify-between text-sm font-semibold mb-2">
+                        <span class="text-slate-800">Leadership & Management</span>
+                        <span class="text-brand-600">85%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-brand-600 h-full rounded-full w-[85%] transition-all duration-1000"></div>
+                    </div>
+                </div>
+
+                <!-- Skill 4 -->
+                <div>
+                    <div class="flex justify-between text-sm font-semibold mb-2">
+                        <span class="text-slate-800">Creative Problem Solving</span>
+                        <span class="text-brand-600">90%</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div class="bg-brand-600 h-full rounded-full w-[90%] transition-all duration-1000"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Banner -->
+    <section class="py-16 gradient-purple-bg text-white text-center relative overflow-hidden">
+        <div class="max-w-3xl mx-auto px-6 relative z-10">
+            <i class="fa-solid fa-quote-left text-4xl text-brand-300 opacity-60 mb-4 block"></i>
+            <p class="text-xl md:text-2xl font-serif italic leading-relaxed text-brand-100">
+                "Menari mengajari saya bagaimana bergerak ikhlas mengikuti irama kehidupan, sedangkan impian menjadi Bos Muda mengajari saya bagaimana menentukan arah tujuan."
+            </p>
+            <h5 class="mt-6 font-bold tracking-widest text-sm uppercase text-brand-300">— Indah Rizky Nita</h5>
+        </div>
+    </section>
+
+    <!-- Form Kontak & Socials Section -->
+    <section id="kontak" class="py-20 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12">
+                
+                <div class="md:col-span-5 space-y-6">
+                    <span class="text-xs font-extrabold text-brand-600 uppercase tracking-widest">Mari Terhubung</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 font-serif">Hubungi Indah</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Tertarik untuk berkolaborasi dalam proyek seni tari, ide bisnis, atau sekadar ingin menyapa? Silakan hubungi saya melalui kontak di bawah ini.
+                    </p>
+
+                    <div class="space-y-4 pt-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-medium">Email</span>
+                                <span class="font-semibold text-slate-800">indah.rizkynita@example.com</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400 font-medium">Lokasi</span>
+                                <span class="font-semibold text-slate-800">Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="md:col-span-7">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200">
+                        <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-5">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Nama Lengkap</label>
+                                <input type="text" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:border-brand-500 focus:bg-white transition-all text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Email</label>
+                                <input type="email" required placeholder="nama@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:border-brand-500 focus:bg-white transition-all text-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">Pesan</label>
+                                <textarea rows="4" required placeholder="Tuliskan pesan atau ide kolaborasi Anda..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:outline-none focus:border-brand-500 focus:bg-white transition-all text-sm resize-none"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-brand-500/30 transition-all">
+                                Kirim Pesan <i class="fa-solid fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+
+                        <!-- Notification Box -->
+                        <div id="msgNotice" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-medium text-center">
+                            ✨ Terima kasih! Pesan Anda berhasil terkirim kepada Indah.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-6 space-y-4">
+            <p class="font-serif italic text-white text-lg">Indah Rizky Nita</p>
+            <p class="text-xs text-slate-500">© 2026 Indah Rizky Nita. All Rights Reserved. Purple Aesthetic CV Theme.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const notice = document.getElementById('msgNotice');
+            const form = document.getElementById('contactForm');
+            
+            notice.classList.remove('hidden');
+            form.reset();
+
+            setTimeout(() => {
+                notice.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
